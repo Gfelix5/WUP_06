@@ -48,6 +48,7 @@ barchartGC(~race + cappun,data=mydata)
 barchartGC(~race + cappun,data=mydata, type="percent")
 
 ```
+Here we also see that the white race significantly accepts capital punishment. Black is the most to oppose. The other races seem to be in favor of it.
 
 ## Now with LESS data (more variables give less data due to NA's) create the approate graphic displays to answer the question.
 
