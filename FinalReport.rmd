@@ -82,7 +82,6 @@ fisher.test(table1)
 ```
 
 
-
 The only p value that is significant is between the white and black race. 
 
 # Discussion and Conclusion
