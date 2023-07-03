@@ -34,6 +34,8 @@ If not, then whose view differs from whom??
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method. Discuss what data manipulations may be needed for example subsetting or other binning procedures and what sort of graphical displays and inferential tools will be used!-->
 
+To start of I will my data with tigerstat. Next I will put this data in a barchart to distinguish who is in favor and who opposes 
+
 # Results
 
 <!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
@@ -49,6 +51,7 @@ barchartGC(~race + cappun,data=mydata)
 barchartGC(~race + cappun,data=mydata, type="percent")
 
 ```
+In the graph we see that the white race favors capital punishment significantly more than the other races. On the contrary the black race oppose capital punishment more than other races. The other races do accept captital punishment more than they oppose it but the graph shows a good percent of them are in favor of it. 
 
 ## Now with The Most data (fewer variables gives more data points)
 
@@ -58,8 +61,12 @@ barchartGC(~race + cappun,data=mydata, type="percent")
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
-
-
+```{r}
+table1 <- xtabs(~race + cappun, data=mydata)
+rowPerc(table1)
+colPerc(table1)
+```
+As we can see in this numerical summary 65.10% of the white race is in favor of capital punishment therefore the majoirty of of them are in favor, they also have the lowest people to oppose it at 34.90%. Although a majority of the black race opposes it they have 42.63% of their people who accpet it. The other races have a more similar favor and opposition. 
 
 ## Now with More data
 
